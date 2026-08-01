@@ -1,8 +1,12 @@
-import { Vector3 } from "./Vector3.js";
-let A = new Vector3(3,4,0);
-let B = new Vector3(1,2,3);
-let C = A.add(B);
-document.getElementById("demo").innerHTML =
-"C = " + C.show() +
-"<br><br>" +
-"Length = " + C.length();
+import * as THREE from "https://unpkg.com/three@0.179.1/build/three.module.js";
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(
+    75,
+    window.innerWidth / window.innerHeight,
+    0.1,
+    1000
+);
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setClearColor(0x87CEEB);
+document.body.appendChild(renderer.domElement);
