@@ -1,4 +1,3 @@
-
 import * as THREE from "https://unpkg.com/three@0.179.1/build/three.module.js";f
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
