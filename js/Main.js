@@ -1,3 +1,4 @@
+alert("Main.js Loaded");
 import * as THREE from "https://unpkg.com/three@0.179.1/build/three.module.js";
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
