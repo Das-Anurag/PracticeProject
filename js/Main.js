@@ -13,32 +13,32 @@ const camera = new THREE.PerspectiveCamera(
 
 // Create the Renderer
 const renderer = new THREE.WebGLRenderer();
-
-// Set canvas size
-renderer.setSize(400, 400);
-
-// Set background color (Red)
-renderer.setClearColor(0xff00ff);
-
-// Add the canvas to the webpage
+renderer.setSize(400, 300);
+renderer.setClearColor(0xff0000);
 document.body.appendChild(renderer.domElement);
 
-// Create the cube shape
-const geometry = new THREE.BoxGeometry(1, 2, 1);
-
-// Create the cube material (Green)
+// Create the cube
+const geometry = new THREE.BoxGeometry(1, 1, 1);
 const material = new THREE.MeshBasicMaterial({
-    color: 0xffff00
+    color: 0x00ff00
 });
-
-// Combine geometry and material into a cube
 const cube = new THREE.Mesh(geometry, material);
 
-// Add the cube to the scene
 scene.add(cube);
 
-// Move the camera back so the cube is visible
+// Move the camera back
 camera.position.z = 5;
 
-// Draw the scene
-renderer.render(scene, camera);
+// Animation loop
+function animate() {
+
+    requestAnimationFrame(animate);
+
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
+
+    renderer.render(scene, camera);
+
+}
+
+animate();
