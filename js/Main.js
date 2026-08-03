@@ -15,7 +15,7 @@ const camera = new THREE.PerspectiveCamera(
 const renderer = new THREE.WebGLRenderer();
 
 // Set canvas size
-renderer.setSize(400, 300);
+renderer.setSize(400, 400);
 
 // Set background color (Red)
 renderer.setClearColor(0xff0000);
