@@ -17,4 +17,5 @@ alert("6");
 renderer.setClearColor(0xff0000);
 alert("7");
 document.body.appendChild(renderer.domElement);
+renderer.render(scene, camera);
 alert("8");
