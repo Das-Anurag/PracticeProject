@@ -15,21 +15,28 @@ const camera = new THREE.PerspectiveCamera(
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(400, 300);
 renderer.setClearColor(0xff0000);
+document.body.style.margin = "0";
 document.body.appendChild(renderer.domElement);
 
-// Create the cube
+// Create the Cube
 const geometry = new THREE.BoxGeometry(1, 1, 1);
 const material = new THREE.MeshBasicMaterial({
     color: 0x00ff00
 });
 const cube = new THREE.Mesh(geometry, material);
 
+// Move the cube
+cube.position.x = 2;
+cube.position.y = 1;
+cube.position.z = -1;
+
+// Add the cube to the scene
 scene.add(cube);
 
 // Move the camera back
 camera.position.z = 5;
 
-// Animation loop
+// Animation Loop
 function animate() {
 
     requestAnimationFrame(animate);
