@@ -18,13 +18,13 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(400, 400);
 
 // Set background color (Red)
-renderer.setClearColor(0xff0000);
+renderer.setClearColor(0xff00ff);
 
 // Add the canvas to the webpage
 document.body.appendChild(renderer.domElement);
 
 // Create the cube shape
-const geometry = new THREE.BoxGeometry(1, 1, 1);
+const geometry = new THREE.BoxGeometry(1, 2, 1);
 
 // Create the cube material (Green)
 const material = new THREE.MeshBasicMaterial({
