@@ -26,8 +26,8 @@ const material = new THREE.MeshBasicMaterial({
 const cube = new THREE.Mesh(geometry, material);
 
 // Move the cube
-cube.position.x = 100;
-cube.position.y = 100;
+cube.position.x = 10;
+cube.position.y = 5;
 cube.position.z = -1;
 
 // Add the cube to the scene
