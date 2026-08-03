@@ -1,4 +1,4 @@
-import * as THREE from "https://unpkg.com/three@0.179.1/build/three.module.js";f
+import * as THREE from "https://unpkg.com/three@0.179.1/build/three.module.js";
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
     75,
@@ -10,4 +10,3 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(400, 300);
 renderer.setClearColor(0xff0000);
 document.body.appendChild(renderer.domElement);
-renderer.render(scene, camera);
