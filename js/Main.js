@@ -28,7 +28,7 @@ const geometry = new THREE.BoxGeometry(1, 2, 1);
 
 // Create the cube material (Green)
 const material = new THREE.MeshBasicMaterial({
-    color: 0x00ff00
+    color: 0xffff00
 });
 
 // Combine geometry and material into a cube
