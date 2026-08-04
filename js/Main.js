@@ -25,11 +25,11 @@ const material1 = new THREE.MeshBasicMaterial({
 });
 const cubes = [];
 
-for (let i = 0; i < 3; i++) {
+for (let i = 0; i < 10; i++) {
 
     const cube = new THREE.Mesh(geometry, material1);
 
-    cube.position.x = (i - 1) * 2;
+    cube.position.x = (i - 4.5) * 2;
 
     scene.add(cube);
 
