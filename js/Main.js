@@ -29,7 +29,7 @@ for (let i = 0; i < 10; i++) {
 
     const cube = new THREE.Mesh(geometry, material1);
 
-    cube.position.x = (i - 4.5) * 2;
+    cube.position.x = (i - 4.5) * 0.5;
 
     scene.add(cube);
 
