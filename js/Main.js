@@ -21,25 +21,19 @@ document.body.appendChild(renderer.domElement);
 // Create one geometry (shared by all cubes)
 const geometry = new THREE.BoxGeometry(1, 1, 1);
 
-// Create three different materials
-const material1 = new THREE.MeshBasicMaterial({ color: 0xff0000 });
-const material2 = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-const material3 = new THREE.MeshBasicMaterial({ color: 0x0000ff });
+const cubes = [];
 
-// Create three cubes
-const cube1 = new THREE.Mesh(geometry, material1);
-const cube2 = new THREE.Mesh(geometry, material2);
-const cube3 = new THREE.Mesh(geometry, material3);
+for (let i = 0; i < 3; i++) {
 
-// Set their positions
-cube1.position.x = -2;
-cube2.position.x = 0;
-cube3.position.x = 2;
+    const cube = new THREE.Mesh(geometry, material1);
 
-// Add them to the scene
-scene.add(cube1);
-scene.add(cube2);
-scene.add(cube3);
+    cube.position.x = (i - 1) * 2;
+
+    scene.add(cube);
+
+    cubes.push(cube);
+
+}
 
 // Move the camera back
 camera.position.z = 5;
