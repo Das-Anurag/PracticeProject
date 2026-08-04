@@ -38,7 +38,8 @@ for (let i = 0; i < 10; i++) {
 }
 
 // Move the camera back
-camera.position.z = 12;
+camera.position.set(10, 11, 12);
+camera.lookAt(0, 0, 0);
 
 // Animation Loop
 function animate() {
