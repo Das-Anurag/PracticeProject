@@ -43,14 +43,12 @@ function animate() {
 
     requestAnimationFrame(animate);
 
-    cube1.rotation.x += 0.01;
-    cube1.rotation.y += 0.01;
+    for (let i = 0; i < cubes.length; i++) {
 
-    cube2.rotation.x += 0.02;
-    cube2.rotation.y += 0.02;
+    cubes[i].rotation.x += 0.01 * (i + 1);
+    cubes[i].rotation.y += 0.01 * (i + 1);
 
-    cube3.rotation.x += 0.03;
-    cube3.rotation.y += 0.03;
+    }
 
     renderer.render(scene, camera);
 }
