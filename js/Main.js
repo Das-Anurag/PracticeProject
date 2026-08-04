@@ -5,7 +5,7 @@ const scene = new THREE.Scene();
 
 // Create the Camera
 const camera = new THREE.PerspectiveCamera(
-    75,
+    30,
     window.innerWidth / window.innerHeight,
     0.1,
     1000
@@ -38,7 +38,7 @@ for (let i = 0; i < 10; i++) {
 }
 
 // Move the camera back
-camera.position.z = 5;
+camera.position.z = 12;
 
 // Animation Loop
 function animate() {
