@@ -31,7 +31,15 @@ for (let layer = 0; layer < 3; layer++) {
 
         for (let col = 0; col < 3; col++) {
 
-            const cube = new THREE.Mesh(geometry, material1);
+            const material = new THREE.MeshBasicMaterial({
+    color: new THREE.Color(
+        col / 2,
+        row / 2,
+        layer / 2
+    )
+});
+
+const cube = new THREE.Mesh(geometry, material);
 
             cube.position.x = (col - 1) * 2;
             cube.position.y = (1 - row) * 2;
