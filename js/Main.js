@@ -2,6 +2,11 @@ import * as THREE from "https://unpkg.com/three@0.179.1/build/three.module.js";
 
 // Create the Scene
 const scene = new THREE.Scene();
+const light = new THREE.DirectionalLight(0xffffff, 1);
+
+light.position.set(5, 5, 5);
+
+scene.add(light);
 
 // Create the Camera
 const camera = new THREE.PerspectiveCamera(
@@ -29,7 +34,7 @@ for (let layer = 0; layer < 3; layer++) {
 
         for (let col = 0; col < 3; col++) {
 
-            const material = new THREE.MeshBasicMaterial({
+            const material = new THREE.MeshPhongMaterial({
     color: new THREE.Color(
         col / 2,
         row / 2,
