@@ -2,12 +2,12 @@ import * as THREE from "https://unpkg.com/three@0.179.1/build/three.module.js";
 
 // Create the Scene
 const scene = new THREE.Scene();
-const light = new THREE.DirectionalLight(0xffffff, 1);
+const light = new THREE.DirectionalLight(0xffffff, 0.5);
 
 light.position.set(5, 5, 5);
 
 scene.add(light);
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
 
 scene.add(ambientLight);
 // Create the Camera
