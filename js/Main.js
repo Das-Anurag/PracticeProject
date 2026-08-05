@@ -40,7 +40,7 @@ for (let layer = 0; layer < 3; layer++) {
         row / 2,
         layer / 2
     ),
-    wireframe: true
+    wireframe: false
 });
 
 const cube = new THREE.Mesh(geometry, material);
