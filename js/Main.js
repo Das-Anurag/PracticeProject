@@ -25,23 +25,27 @@ const material1 = new THREE.MeshBasicMaterial({
 });
 const cubes = [];
 
-for (let row = 0; row < 3; row++) {
+for (let layer = 0; layer < 3; layer++) {
 
-    for (let col = 0; col < 3; col++) {
+    for (let row = 0; row < 3; row++) {
 
-        const cube = new THREE.Mesh(geometry, material1);
+        for (let col = 0; col < 3; col++) {
 
-        cube.position.x = (col - 1) * 2;
-        cube.position.y = (1 - row) * 2;
+            const cube = new THREE.Mesh(geometry, material1);
 
-        scene.add(cube);
+            cube.position.x = (col - 1) * 2;
+            cube.position.y = (1 - row) * 2;
+            cube.position.z = (layer - 1) * 2;
 
-        cubes.push(cube);
+            scene.add(cube);
+
+            cubes.push(cube);
+
+        }
 
     }
 
 }
-
 // Move the camera back
 camera.position.set(10, 11, 12);
 camera.lookAt(0, 0, 0);
