@@ -20,9 +20,7 @@ document.body.appendChild(renderer.domElement);
 
 // Create one geometry (shared by all cubes)
 const geometry = new THREE.BoxGeometry(1, 1, 1);
-const material1 = new THREE.MeshBasicMaterial({
-    color: 0x00ff00
-});
+
 const cubes = [];
 
 for (let layer = 0; layer < 3; layer++) {
@@ -36,7 +34,8 @@ for (let layer = 0; layer < 3; layer++) {
         col / 2,
         row / 2,
         layer / 2
-    )
+    ),
+    wireframe: true
 });
 
 const cube = new THREE.Mesh(geometry, material);
