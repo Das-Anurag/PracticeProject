@@ -1,5 +1,5 @@
-import * as THREE from "https://unpkg.com/three@0.179.1/build/three.module.js";
-import { OrbitControls } from "https://unpkg.com/three@0.179.1/examples/jsm/controls/OrbitControls.js";
+import * as THREE from "three";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 // Create the Scene
 const scene = new THREE.Scene();
 const light = new THREE.DirectionalLight(0xffffff, 0.5);
@@ -24,7 +24,6 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setClearColor(0x87CEEB);
 document.body.style.margin = "0";
 document.body.appendChild(renderer.domElement);
-const controls = new OrbitControls(camera, renderer.domElement);
 // Create one geometry (shared by all cubes)
 const geometry = new THREE.BoxGeometry(1, 1, 1);
 
@@ -63,7 +62,8 @@ const cube = new THREE.Mesh(geometry, material);
 // Move the camera back
 camera.position.set(10, 11, 12);
 camera.lookAt(0, 0, 0);
-
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
 // Animation Loop
 function animate() {
 
