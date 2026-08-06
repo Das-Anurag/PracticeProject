@@ -2,6 +2,8 @@ import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 // Create the Scene
 const scene = new THREE.Scene();
+const axesHelper = new THREE.AxesHelper(5);
+scene.add(axesHelper);
 const light = new THREE.DirectionalLight(0xffffff, 0.5);
 
 light.position.set(5, 5, 5);
