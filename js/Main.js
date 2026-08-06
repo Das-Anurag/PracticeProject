@@ -29,38 +29,52 @@ document.body.appendChild(renderer.domElement);
 // Create one geometry (shared by all cubes)
 const geometry = new THREE.BoxGeometry(1, 1, 1);
 
-const cubes = [];
+//const cubes = [];
 
-for (let layer = 0; layer < 1; layer++) {
+//for (let layer = 0; layer < 1; layer++) {
+    //for (let row = 0; row < 1; row++) {
+      //  for (let col = 0; col < 1; col++) {
 
-    for (let row = 0; row < 1; row++) {
+            //const material = new THREE.MeshPhongMaterial({
+// color: new THREE.Color(
+       // col / 2,
+      //  row / 2,
+       // layer / 2
+    //),
+ //   wireframe: false
+//});
 
-        for (let col = 0; col < 1; col++) {
+//const cube = new THREE.Mesh(geometry, material);
 
-            const material = new THREE.MeshPhongMaterial({
-    color: new THREE.Color(
-        col / 2,
-        row / 2,
-        layer / 2
-    ),
-    wireframe: false
-});
+         //   cube.position.x = (col - 1) * 2;
+         //   cube.position.y = (1 - row) * 2;
+          //  cube.position.z = (layer - 1) * 2;
 
-const cube = new THREE.Mesh(geometry, material);
+        //    scene.add(cube);
 
-            cube.position.x = (col - 1) * 2;
-            cube.position.y = (1 - row) * 2;
-            cube.position.z = (layer - 1) * 2;
+         //   cubes.push(cube);
 
-            scene.add(cube);
+     //   }
 
-            cubes.push(cube);
+ //   }
 
-        }
+//}
+const direction = new THREE.Vector3(1, 1, 0).normalize();
 
-    }
+const origin = new THREE.Vector3(0, 0, 0);
 
-}
+const length = 5;
+
+const color = 0xff0000;
+
+const arrow = new THREE.ArrowHelper(
+    direction,
+    origin,
+    length,
+    color
+);
+
+scene.add(arrow);
 // Move the camera back
 camera.position.set(10, 11, 12);
 camera.lookAt(0, 0, 0);
