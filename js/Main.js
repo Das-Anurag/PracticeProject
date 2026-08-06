@@ -31,11 +31,11 @@ const geometry = new THREE.BoxGeometry(1, 1, 1);
 
 const cubes = [];
 
-for (let layer = 0; layer < 3; layer++) {
+for (let layer = 0; layer < 1; layer++) {
 
-    for (let row = 0; row < 3; row++) {
+    for (let row = 0; row < 1; row++) {
 
-        for (let col = 0; col < 3; col++) {
+        for (let col = 0; col < 1; col++) {
 
             const material = new THREE.MeshPhongMaterial({
     color: new THREE.Color(
