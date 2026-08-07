@@ -85,14 +85,12 @@ function animate() {
 
     requestAnimationFrame(animate);
 
-    for (let i = 0; i < cubes.length; i++) {
+    arrow.rotation.y += 0.01;
 
-    cubes[i].rotation.x += 0.01 * (i + 1);
-    cubes[i].rotation.y += 0.01 * (i + 1);
+    controls.update();
 
-    }
-controls.update();
     renderer.render(scene, camera);
+
 }
 
 animate();
