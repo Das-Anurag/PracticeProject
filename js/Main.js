@@ -59,7 +59,15 @@ const geometry = new THREE.BoxGeometry(1, 1, 1);
  //   }
 
 //}
-const direction = new THREE.Vector3(1, 1, 0).normalize();
+const alpha = 1;
+const beta = 1;
+const gamma = 0;
+
+const direction = new THREE.Vector3(
+    alpha,
+    beta,
+    gamma
+).normalize();
 
 const origin = new THREE.Vector3(0, 0, 0);
 
